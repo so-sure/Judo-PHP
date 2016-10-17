@@ -24,6 +24,7 @@ class CardPayment extends Model
             'consumerLocation'      => DataType::TYPE_ARRAY,
             'mobileNumber'          => DataType::TYPE_STRING,
             'emailAddress'          => DataType::TYPE_STRING,
+            'clientDetails'         => DataType::TYPE_ARRAY,
         );
     protected $requiredAttributes
         = array(

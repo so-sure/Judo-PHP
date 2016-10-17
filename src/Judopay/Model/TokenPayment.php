@@ -23,6 +23,7 @@ class TokenPayment extends Model
             'mobileNumber'          => DataType::TYPE_STRING,
             'emailAddress'          => DataType::TYPE_STRING,
             'currency'              => DataType::TYPE_STRING,
+            'clientDetails'         => DataType::TYPE_ARRAY,
         );
     protected $requiredAttributes
         = array(
