@@ -41,6 +41,7 @@ class ApiException extends \RuntimeException
         $errorCode = ArrayHelper::get($parsedBody, 'code', 0);
 
         $fieldErrors = array();
+        /*
         if (isset($parsedBody['details'])) {
             foreach ($parsedBody['details'] as $rawFieldError) {
                 $fieldErrors[] = new FieldError(
@@ -51,6 +52,7 @@ class ApiException extends \RuntimeException
                 );
             }
         }
+        */
 
         $statusCode = $response->getStatusCode();
 
