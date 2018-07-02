@@ -17,6 +17,7 @@ class TokenPayment extends Model
             'judoId'                => DataType::TYPE_STRING,
             'amount'                => DataType::TYPE_FLOAT,
             'consumerToken'         => DataType::TYPE_STRING,
+            'oneUseToken'           => DataType::TYPE_STRING,
             'cardToken'             => DataType::TYPE_STRING,
             'cv2'                   => DataType::TYPE_STRING,
             'consumerLocation'      => DataType::TYPE_ARRAY,
@@ -31,6 +32,5 @@ class TokenPayment extends Model
             'yourPaymentReference',
             'judoId',
             'amount',
-            'cardToken',
         );
 }
