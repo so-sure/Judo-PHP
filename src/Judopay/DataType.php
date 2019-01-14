@@ -8,6 +8,7 @@ class DataType
     const TYPE_FLOAT = 'float';
     const TYPE_INTEGER = 'int';
     const TYPE_ARRAY = 'array';
+    const TYPE_BOOLEAN = 'boolean';
 
     public static function coerce($targetDataType, $value)
     {
@@ -29,6 +30,9 @@ class DataType
 
             case DataType::TYPE_INTEGER:
                 return (int) $value;
+
+            case DataType::TYPE_BOOLEAN:
+                return (bool) $value;
         }
 
         return $value;

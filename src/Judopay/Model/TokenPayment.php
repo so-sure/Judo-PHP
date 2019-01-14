@@ -24,6 +24,7 @@ class TokenPayment extends Model
             'emailAddress'          => DataType::TYPE_STRING,
             'currency'              => DataType::TYPE_STRING,
             'clientDetails'         => DataType::TYPE_ARRAY,
+            'recurringPayment'      => DataType::TYPE_BOOLEAN
         );
     protected $requiredAttributes
         = array(
