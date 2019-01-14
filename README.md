@@ -1,4 +1,4 @@
-# Judopay PHP SDK [![Build Status](https://travis-ci.org/JudoPay/Judo-PHP.svg?branch=master)](https://travis-ci.org/JudoPay/Judo-PHP)
+# Judopay PHP SDK [![Build Status](https://travis-ci.org/Judopay/Judo-PHP.svg?branch=master)](https://travis-ci.org/Judopay/Judo-PHP)
 The JudoPay SDK provides you with ability to integrate card payments into your PHP project. Judo's SDK enables a faster, simpler and more secure payment experience within your app.
 ##### **\*\*\*Due to industry-wide security updates, versions below 2.0 of this SDK will no longer be supported after 1st Oct 2016. For more information regarding these updates, please read our blog [here](http://hub.judopay.com/pci31-security-updates/).*****
 
@@ -53,6 +53,8 @@ To make a new payment with full card details:
         )
     );
 ```
+**Note:** Please make sure that you are using a unique Consumer Reference for each different consumer, and a unique Payment Reference for each transaction.
+
 You can check on the required fields and the format of each field in the [Judopay REST API reference](https://www.judopay.com/docs/v5/api-reference/restful-api/#post-card-payment).
 To send the request to the API, call:
 ```php

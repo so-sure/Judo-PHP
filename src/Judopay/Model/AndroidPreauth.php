@@ -2,8 +2,7 @@
 
 namespace Judopay\Model;
 
-class Preauth extends CardPayment
+class AndroidPreauth extends AndroidPayment
 {
     protected $resourcePath = 'transactions/preauths';
-    protected $validApiMethods = array('all','create');
 }

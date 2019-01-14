@@ -5,7 +5,7 @@ namespace Judopay\Model;
 use Judopay\DataType;
 use Judopay\Model;
 
-class TokenPayment extends Model
+class ApplePayment extends Model
 {
     protected $resourcePath = 'transactions/payments';
     protected $validApiMethods = array('create');
@@ -16,14 +16,9 @@ class TokenPayment extends Model
             'yourPaymentMetaData'   => DataType::TYPE_OBJECT,
             'judoId'                => DataType::TYPE_STRING,
             'amount'                => DataType::TYPE_FLOAT,
-            'consumerToken'         => DataType::TYPE_STRING,
-            'cardToken'             => DataType::TYPE_STRING,
-            'cv2'                   => DataType::TYPE_STRING,
-            'mobileNumber'          => DataType::TYPE_STRING,
-            'emailAddress'          => DataType::TYPE_STRING,
             'currency'              => DataType::TYPE_STRING,
-            'clientDetails'         => DataType::TYPE_ARRAY,
-            'recurringPayment'      => DataType::TYPE_BOOLEAN
+            'clientDetails'         => DataType::TYPE_OBJECT,
+            'pkPayment'             => DataType::TYPE_PK_PAYMENT,
         );
     protected $requiredAttributes
         = array(
@@ -31,6 +26,7 @@ class TokenPayment extends Model
             'yourPaymentReference',
             'judoId',
             'amount',
-            'cardToken',
+            'currency',
+            'pkPayment',
         );
 }

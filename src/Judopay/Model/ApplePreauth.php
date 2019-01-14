@@ -2,8 +2,7 @@
 
 namespace Judopay\Model;
 
-class Preauth extends CardPayment
+class ApplePreauth extends ApplePayment
 {
     protected $resourcePath = 'transactions/preauths';
-    protected $validApiMethods = array('all','create');
 }
