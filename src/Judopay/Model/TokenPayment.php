@@ -22,7 +22,7 @@ class TokenPayment extends Model
             'mobileNumber'          => DataType::TYPE_STRING,
             'emailAddress'          => DataType::TYPE_STRING,
             'currency'              => DataType::TYPE_STRING,
-            'clientDetails'         => DataType::TYPE_OBJECT,
+            'clientDetails'         => DataType::TYPE_ARRAY,
             'recurringPayment'      => DataType::TYPE_BOOLEAN
         );
     protected $requiredAttributes

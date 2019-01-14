@@ -12,9 +12,6 @@ class DataType
     const TYPE_FLOAT = 'float';
     const TYPE_INTEGER = 'int';
     const TYPE_ARRAY = 'array';
-    const TYPE_OBJECT = 'object';
-    const TYPE_PK_PAYMENT = 'pk_payment';
-    const TYPE_WALLET = 'wallet';
     const TYPE_BOOLEAN = 'boolean';
 
     public static function coerce($targetDataType, $value)
@@ -34,29 +31,11 @@ class DataType
                 }
 
                 return $value;
+            case DataType::TYPE_INTEGER:
+                return (int) $value;
 
-            case static::TYPE_OBJECT:
-                if (!is_object($value)) {
-                    $value = (object)$value;
-                }
-
-                return $value;
-
-            case static::TYPE_PK_PAYMENT:
-                $pkPayment = PkPayment::factory($value);
-
-                return $pkPayment->toObject();
-
-            case static::TYPE_WALLET:
-                $wallet = Wallet::factory($value);
-
-                return $wallet->toObject();
-
-            case static::TYPE_INTEGER:
-                return (int)$value;
-
-            case static::TYPE_BOOLEAN:
-                return (bool)$value;
+            case DataType::TYPE_BOOLEAN:
+                return (bool) $value;
         }
 
         return $value;

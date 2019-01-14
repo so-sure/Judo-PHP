@@ -13,7 +13,7 @@ class Refund extends Model
         = array(
             'receiptId'            => DataType::TYPE_STRING,
             'yourPaymentReference' => DataType::TYPE_STRING,
-            'amount'               => DataType::TYPE_FLOAT,
+            'amount'               => DataType::TYPE_STRING,
         );
     protected $requiredAttributes
         = array(
